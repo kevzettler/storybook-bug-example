@@ -1,0 +1,101 @@
+{
+  "name": "react-regl",
+  "version": "5.1.0-beta.0",
+  "description": "A custom React Fiber reconciler renderer for regl webGL",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": "16.13.0"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevzettler/react-regl.git"
+  },
+  "keywords": [
+    "WebGL",
+    "regl",
+    "react",
+    "GLSL",
+    "glslify",
+    "scene",
+    "shaders",
+    "graph"
+  ],
+  "author": "kevzettler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevzettler/react-regl/issues"
+  },
+  "homepage": "https://github.com/kevzettler/react-regl#readme",
+  "scripts": {
+    "prepublish": "yarn build",
+    "build": "yarn clean && NODE_ENV=production tsc && mkdir ./dist/types && cp ./src/types/deferred-regl.d.ts ./dist/types/",
+    "clean": "rimraf ./dist",
+    "watch": "NODE_ENV=production babel src --watch -d dist",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook --output-dir ./docs"
+  },
+  "dependencies": {
+    "fbjs": "^3.0.0",
+    "prop-types": "^15.7.2",
+    "react-reconciler": "0.29.0",
+    "regl": "2.1.0",
+    "scheduler": "^0.23.0"
+  },
+  "peerDependencies": {
+    "react": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-export-default-from": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-options": "^5.3.21",
+    "@storybook/addon-storysource": "^6.5.16",
+    "@storybook/addons": "^6.5.16",
+    "@storybook/cli": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@types/pngjs": "^3.4.2",
+    "@types/prop-types": "^15.7.5",
+    "@types/react": "^18.0.27",
+    "@types/react-reconciler": "^0.18.0",
+    "@types/scheduler": "^0.16.1",
+    "@types/seedrandom": "^2.4.28",
+    "angle-normals": "^1.0.0",
+    "arraybuffer-loader": "^1.0.8",
+    "babel-loader": "^8.2.2",
+    "baboon-image": "^2.1.0",
+    "buffer": "^6.0.3",
+    "bunny": "^1.0.1",
+    "canvas-fit": "^1.5.0",
+    "canvas-orbit-camera": "^1.0.2",
+    "getusermedia": "^2.0.1",
+    "gl": "^4.9.0",
+    "gl-context": "^0.1.1",
+    "gl-matrix": "^3.3.0",
+    "hsv2rgb": "^1.1.0",
+    "mouse-change": "^1.4.0",
+    "mouse-wheel": "^1.2.0",
+    "pngjs": "^6.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "requestidlecallback": "^0.3.0",
+    "rimraf": "^4.1.2",
+    "seedrandom": "^3.0.5",
+    "typescript": "4.9.4",
+    "vectorize-text": "^3.2.1"
+  },
+  "packageManager": "yarn@3.3.1"
+}
